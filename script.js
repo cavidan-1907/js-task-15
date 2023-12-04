@@ -7,7 +7,7 @@ window.onscroll=()=>{
     const scrolled = window.scrollY;
 
     if (scrolled > 50){
-        nav.style.background="navy";
+        nav.style.background="rgb(133, 133, 198)";
         nav.style.padding="20px 0"
     }
 
