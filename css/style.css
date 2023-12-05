@@ -114,7 +114,7 @@ nav .container .nav ul {
   }
 }
 .section1 {
-  background-image: url(banner-bg.jpg.webp);
+  background-image: url(../photo/banner-bg.jpg.webp);
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -538,7 +538,7 @@ nav .container .nav ul {
 .section4 .container .section41 .right {
   width: 54%;
   height: 330px;
-  background-image: url(scifi-image.webp);
+  background-image: url(../photo/scifi-image.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -610,7 +610,7 @@ nav .container .nav ul {
   }
 }
 .section5 {
-  background-image: url(feature-bg.jpg.webp);
+  background-image: url(../photo/feature-bg.jpg.webp);
   width: 100%;
   padding: 120px 0;
   background-size: cover;
@@ -794,7 +794,7 @@ nav .container .nav ul {
   }
 }
 footer {
-  background-image: url(footer-bg.jpg.webp);
+  background-image: url(../photo/footer-bg.jpg.webp);
   width: 100%;
   padding: 120px 0;
   background-size: cover;
