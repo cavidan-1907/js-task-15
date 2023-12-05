@@ -4,7 +4,7 @@ nav {
   position: fixed;
   padding: 32px 0;
   transition: all 0.5s ease;
-  background-color:rgb(133, 133, 198);
+  background-color: rgb(133, 133, 198);
 }
 nav .container .nav {
   width: 100%;
