@@ -539,6 +539,9 @@ nav .container .nav ul {
   width: 54%;
   height: 330px;
   background-image: url(scifi-image.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .section4 .container .section41 .right .after {
   width: 100%;
