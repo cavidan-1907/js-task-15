@@ -83,6 +83,7 @@ footer{
                     }
                     .input{
                         display: flex;
+                        flex-wrap: wrap;
                         gap: 10px;
                         input {
                             border-radius: 25px;
@@ -132,9 +133,11 @@ footer{
 footer{
     .container{
         .footer{
+
             .bottom{
                 flex-direction: column;
                 align-items:flex-start ;
+
     
             }
         }
