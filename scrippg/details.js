@@ -3,7 +3,9 @@ let id=new URLSearchParams(window.location.search).get("id");
 fetch(`http://localhost:3000/robots/${id}`)
 .then(reponse =>reponse.json())
 .then(data=>{
-    document.body.innerHTML+=
+    const card = document.createElement('div');
+    card.classList.add('card');
+    card.innerHTML= 
     `
     <div class="img">
 <img src="${data.image}" alt="" />
@@ -13,4 +15,5 @@ fetch(`http://localhost:3000/robots/${id}`)
 <p>${data.p}</p>
 </div>
     `
+    document.querySelector(".section1").append(card)
 })
