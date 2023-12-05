@@ -1,5 +1,40 @@
 let nav = document.querySelector("nav");
 let menu = document.querySelector("#click");
+let modal = document.querySelector(".modal-bg");
+let close = document.querySelector(".close");
+
+menu.addEventListener('click', () => {
+  if (window.innerWidth > 991) {
+    modal.style.display = "none";
+  } else {
+    if (modal.style.display === "none") {
+      modal.style.display = "block";
+      menu.style.width = "160px";
+    } else {
+      modal.style.display = "none";
+      menu.style.width = "auto"; 
+      setTimeout(() => {
+        modal.style.display = "none";
+      }, 500);
+    }
+  }
+});
+
+close.addEventListener('click', () => {
+  modal.style.display = "none";
+});
+
+
+
+
+
+
+
+
+
+
+
+
 
 window.onscroll = () => {
   if (window.scrollY > 50) {

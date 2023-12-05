@@ -13,6 +13,7 @@ window.onscroll = () => {
 };
 
 
+
 let id=new URLSearchParams(window.location.search).get("id");
 
 fetch(`http://localhost:3000/robots/${id}`)
