@@ -24,6 +24,19 @@
         cursor: pointer;
     }
 }
+
+*button{
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+*img{
+    &:hover{
+        cursor: pointer;
+    }
+}
+
 .dropdown {
     position: relative;
     .dropdown-menu {

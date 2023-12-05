@@ -27,6 +27,14 @@
   cursor: pointer;
 }
 
+* button:hover {
+  cursor: pointer;
+}
+
+* img:hover {
+  cursor: pointer;
+}
+
 .dropdown {
   position: relative;
 }
@@ -78,7 +86,7 @@ nav .container .nav .left img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-nav .container .nav i {
+nav .container .nav #click {
   color: white;
   font-size: 25px;
   font-weight: 900;
@@ -98,7 +106,7 @@ nav .container .nav ul {
   nav .container {
     width: 90%;
   }
-  nav .container .nav i {
+  nav .container .nav #click {
     display: block;
   }
   nav .container .nav ul {
@@ -198,6 +206,7 @@ nav .container .nav ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 10px;
 }
 .section2 .container .section21 .top h1 {
@@ -207,13 +216,13 @@ nav .container .nav ul {
 .section2 .container .section21 .top p {
   color: gray;
 }
-.section2 .container .section21 .bottom {
+.section2 .container .section21 .bottom1 {
   display: grid;
   width: 100%;
   gap: 20px;
   grid-template-columns: repeat(4, 1fr);
 }
-.section2 .container .section21 .bottom .card {
+.section2 .container .section21 .bottom1 .card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -224,18 +233,18 @@ nav .container .nav ul {
   background-color: white;
   gap: 20px;
 }
-.section2 .container .section21 .bottom .card .img {
+.section2 .container .section21 .bottom1 .card .img {
   width: 45%;
   height: 100%;
   padding: 20px;
 }
-.section2 .container .section21 .bottom .card .img img {
+.section2 .container .section21 .bottom1 .card .img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.section2 .container .section21 .bottom .card .text {
+.section2 .container .section21 .bottom1 .card .text {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -246,13 +255,13 @@ nav .container .nav ul {
   padding: 20px;
   background-color: #f1f1f1;
 }
-.section2 .container .section21 .bottom .card .text h5 {
+.section2 .container .section21 .bottom1 .card .text h5 {
   font-size: 20px;
 }
-.section2 .container .section21 .bottom .card .text p {
+.section2 .container .section21 .bottom1 .card .text p {
   color: gray;
 }
-.section2 .container .section21 .bottom .card .text button {
+.section2 .container .section21 .bottom1 .card .text button {
   color: #222;
   padding: 13px 25px;
   border-color: white;
@@ -261,7 +270,7 @@ nav .container .nav ul {
   font-weight: 600;
   transition: all 0.5s ease;
 }
-.section2 .container .section21 .bottom .card .text button:hover {
+.section2 .container .section21 .bottom1 .card .text button:hover {
   color: white;
   background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
 }
@@ -295,13 +304,13 @@ nav .container .nav ul {
   .section2 .container .section21 .top p {
     color: gray;
   }
-  .section2 .container .section21 .bottom {
+  .section2 .container .section21 .bottom1 {
     display: grid;
     width: 100%;
     gap: 20px;
     grid-template-columns: repeat(2, 1fr);
   }
-  .section2 .container .section21 .bottom .card {
+  .section2 .container .section21 .bottom1 .card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -312,20 +321,20 @@ nav .container .nav ul {
     background-color: white;
     gap: 20px;
   }
-  .section2 .container .section21 .bottom .card .img {
+  .section2 .container .section21 .bottom1 .card .img {
     width: 30%;
     height: 100%;
     min-width: 100px;
     max-width: 200px;
     padding: 20px;
   }
-  .section2 .container .section21 .bottom .card .img img {
+  .section2 .container .section21 .bottom1 .card .img img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .section2 .container .section21 .bottom .card .text {
+  .section2 .container .section21 .bottom1 .card .text {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -336,13 +345,13 @@ nav .container .nav ul {
     padding: 20px;
     background-color: #f1f1f1;
   }
-  .section2 .container .section21 .bottom .card .text h5 {
+  .section2 .container .section21 .bottom1 .card .text h5 {
     font-size: 20px;
   }
-  .section2 .container .section21 .bottom .card .text p {
+  .section2 .container .section21 .bottom1 .card .text p {
     color: gray;
   }
-  .section2 .container .section21 .bottom .card .text button {
+  .section2 .container .section21 .bottom1 .card .text button {
     color: #222;
     padding: 13px 25px;
     border-color: white;
@@ -351,7 +360,7 @@ nav .container .nav ul {
     font-weight: 600;
     transition: all 0.5s ease;
   }
-  .section2 .container .section21 .bottom .card .text button:hover {
+  .section2 .container .section21 .bottom1 .card .text button:hover {
     color: white;
     background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
   }
@@ -385,13 +394,13 @@ nav .container .nav ul {
   .section2 .container .section21 .top p {
     color: gray;
   }
-  .section2 .container .section21 .bottom {
+  .section2 .container .section21 .bottom1 {
     display: grid;
     width: 100%;
     gap: 20px;
     grid-template-columns: repeat(1, 1fr);
   }
-  .section2 .container .section21 .bottom .card {
+  .section2 .container .section21 .bottom1 .card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -402,18 +411,18 @@ nav .container .nav ul {
     background-color: white;
     gap: 20px;
   }
-  .section2 .container .section21 .bottom .card .img {
+  .section2 .container .section21 .bottom1 .card .img {
     width: 20%;
     height: 100%;
     padding: 20px;
   }
-  .section2 .container .section21 .bottom .card .img img {
+  .section2 .container .section21 .bottom1 .card .img img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .section2 .container .section21 .bottom .card .text {
+  .section2 .container .section21 .bottom1 .card .text {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -424,13 +433,13 @@ nav .container .nav ul {
     padding: 20px;
     background-color: #f1f1f1;
   }
-  .section2 .container .section21 .bottom .card .text h5 {
+  .section2 .container .section21 .bottom1 .card .text h5 {
     font-size: 20px;
   }
-  .section2 .container .section21 .bottom .card .text p {
+  .section2 .container .section21 .bottom1 .card .text p {
     color: gray;
   }
-  .section2 .container .section21 .bottom .card .text button {
+  .section2 .container .section21 .bottom1 .card .text button {
     color: #222;
     padding: 13px 25px;
     border-color: white;
@@ -439,7 +448,7 @@ nav .container .nav ul {
     font-weight: 600;
     transition: all 0.5s ease;
   }
-  .section2 .container .section21 .bottom .card .text button:hover {
+  .section2 .container .section21 .bottom1 .card .text button:hover {
     color: white;
     background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
   }
@@ -527,27 +536,23 @@ nav .container .nav ul {
   gap: 20px;
 }
 .section4 .container .section41 .right {
-  width: 50%;
+  width: 54%;
+  height: 330px;
+  background-image: url(scifi-image.webp);
+}
+.section4 .container .section41 .right .after {
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+  opacity: 0.8;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
-.section4 .container .section41 .right::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
-  width: 100%;
-  height: 100%;
-  opacity: 0.7;
-}
-.section4 .container .section41 .right img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.section4 .container .section41 .right .after i {
+  font-size: 60px;
+  color: white;
+  cursor: pointer;
 }
 .section4 .container .section41 .left {
   width: 40%;
@@ -684,22 +689,25 @@ nav .container .nav ul {
 .section6 .container .section61 {
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
-.section6 .container .section61 .top {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(5, 1fr);
+.section6 .container .img {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.section6 .container .section61 .top .img {
-  width: 100%;
-  height: 100%;
-}
-.section6 .container .section61 .top .img img {
-  width: 60%;
+.section6 .container .img img {
+  width: 13%;
+  filter: grayscale(100%);
   -o-object-fit: cover;
      object-fit: cover;
+  transition: all 0.4s ease;
+}
+.section6 .container .img img:hover {
+  filter: none;
+  cursor: pointer;
 }
 
 .section7 {
