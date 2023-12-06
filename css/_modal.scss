@@ -6,10 +6,10 @@
     top: 0;
     z-index: 1000;
     display: none;
-  transition: width 2s ease;
+    transition: background-color 0.5s ease;
 
     .modal-menu {
-        width: 30%;
+        width: 34%;
         height: 100vh;
         background-color: black;
         position: fixed;
@@ -17,7 +17,8 @@
         left: 0;
         top: 0;
         z-index: 1001;
-
+        left: -30%; 
+        transition: left 1s ease;
         .menu {
             display: flex;
             flex-direction: column;
@@ -74,34 +75,36 @@
 
 
 
-// let modal= document.querySelector(".modal-bg");
+.arrow{
+
+ 
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50%;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    display: none;
+    transition: all 2s ease;
+}
+.ArrowBottom{
+
+ 
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50%;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+   
+    transition: all 2s ease;
+}
+body{
+    position: relative;
+}
 
 
 
-// const menu = document.querySelector(".modal-menu");
-// document.querySelector("#click").addEventListener('click', (event) => {
-//     event.preventDefault();
-//     menu.style.display = "block";
-//     document.querySelector(".modal-bg").style.display = "block";
-// });
-// document.querySelector(".close").addEventListener('click', () => {
-//     menu.style.display = "none";
-//     document.querySelector(".modal-bg").style.display = "none";
-// });
-// document.addEventListener('click', (event) => {
-//     if (!menu.contains(event.target) && event.target !== document.querySelector("#click")) {
-//         menu.style.display = "none";
-//         document.querySelector(".modal-bg").style.display = "none";
-//     }
-// });
-
-// window.onscroll=()=>{
-// if (window.innerWidth > 991){
-//   modal.style.display = "none";
-// }
-// else{
-//   modal.style.display = "block";
-// }
-
-// };
 

@@ -2,17 +2,21 @@ let nav = document.querySelector("nav");
 let menu = document.querySelector("#click");
 let modal = document.querySelector(".modal-bg");
 let close = document.querySelector(".close");
-
+let arrow = document.querySelector(".arrow");
+let arrowBottom = document.querySelector(".ArrowBottom");
 menu.addEventListener('click', () => {
   if (window.innerWidth > 991) {
     modal.style.display = "none";
   } else {
     if (modal.style.display === "none") {
       modal.style.display = "block";
-      menu.style.width = "160px";
+      setTimeout(() => {
+        modal.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+        modal.querySelector(".modal-menu").style.left = "0";
+      }, 100);
     } else {
-      modal.style.display = "none";
-      menu.style.width = "auto"; 
+      modal.style.backgroundColor = "rgba(0, 0, 0, 0)";
+      modal.querySelector(".modal-menu").style.left = "-30%";
       setTimeout(() => {
         modal.style.display = "none";
       }, 500);
@@ -21,9 +25,12 @@ menu.addEventListener('click', () => {
 });
 
 close.addEventListener('click', () => {
-  modal.style.display = "none";
+  modal.style.backgroundColor = "rgba(0, 0, 0, 0)";
+  modal.querySelector(".modal-menu").style.left = "-30%";
+  setTimeout(() => {
+    modal.style.display = "none";
+  }, 500);
 });
-
 
 
 
@@ -38,11 +45,28 @@ close.addEventListener('click', () => {
 
 window.onscroll = () => {
   if (window.scrollY > 50) {
-    nav.style.background = "rgb(133, 133, 198)";
+    nav.style.background = "#8a90ffe6";
+    arrow.style.display="block";
+    arrowBottom.style.display="none";
     nav.style.padding = "20px 0";
+    arrow.addEventListener("click",()=>{
+
+      window.scrollTo({
+                top: 0,
+                behavior: "smooth" 
+            })  
+          });
   } else {
     nav.style.padding = "32px 0";
+    arrow.style.display="none";
+    arrowBottom.style.display="block";
     nav.style.backgroundColor = "transparent";
+    arrowBottom.addEventListener("click", () => {
+      window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth"
+      });
+  });
   }
 };
 
@@ -75,6 +99,10 @@ fetch('http://localhost:3000/robots')
     axios.delete(`http://localhost:3000/robots/${id}`)
 window.location.reload()
   }
+
+
+
+
 
 
   // {

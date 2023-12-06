@@ -29,7 +29,7 @@ fetch(`http://localhost:3000/robots/${id}`)
 <div class="text">
 <h5>${data.name}</h5>
 <p>${data.p}</p>
-<button>${data.button}
+<button>VIEW MORE
 </button>  
 </div>
     `

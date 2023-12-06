@@ -206,6 +206,7 @@ nav .container .nav ul {
   }
   .section1 .container .section11 .right1 {
     width: 60%;
+    min-width: 200px;
   }
 }
 .section2 {
@@ -949,10 +950,10 @@ footer .container .footer .top .child3 .grid {
   top: 0;
   z-index: 1000;
   display: none;
-  transition: width 2s ease;
+  transition: background-color 0.5s ease;
 }
 .modal-bg .modal-menu {
-  width: 30%;
+  width: 34%;
   height: 100vh;
   background-color: black;
   position: fixed;
@@ -960,6 +961,8 @@ footer .container .footer .top .child3 .grid {
   left: 0;
   top: 0;
   z-index: 1001;
+  left: -30%;
+  transition: left 1s ease;
 }
 .modal-bg .modal-menu .menu {
   display: flex;
@@ -1006,4 +1009,31 @@ footer .container .footer .top .child3 .grid {
   top: 25px;
   color: white;
   cursor: pointer;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 50%;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  display: none;
+  transition: all 2s ease;
+}
+
+.ArrowBottom {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 50%;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  transition: all 2s ease;
+}
+
+body {
+  position: relative;
 }/*# sourceMappingURL=style.css.map */
