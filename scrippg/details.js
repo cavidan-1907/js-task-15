@@ -8,7 +8,7 @@ window.onscroll = () => {
     nav.style.padding = "20px 0";
   } else {
     nav.style.padding = "32px 0";
-    nav.style.backgroundColor = "transparent";
+    nav.style.backgroundColor = "rgb(133, 133, 198)";
   }
 };
 
@@ -29,6 +29,8 @@ fetch(`http://localhost:3000/robots/${id}`)
 <div class="text">
 <h5>${data.name}</h5>
 <p>${data.p}</p>
+<button>${data.button}
+</button>  
 </div>
     `
     document.querySelector(".section1").append(card)

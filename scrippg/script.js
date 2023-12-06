@@ -60,14 +60,53 @@ fetch('http://localhost:3000/robots')
         <div class="text">
           <h5>${robot.name}</h5>
           <p>${robot.p}</p>
-          <button onclick="deleteData(${robot.id})">
-            <a href="./dataesehtml/navfoot.html?id=${robot.id}">${robot.button}</a>
-          </button>    
+          <button>
+            <a href="./dataesehtml/navfoot.html?id=${robot.id}">VIEW MORE</a>
+          </button>  
+          <button onclick="deleterobot(${robot.id})">Delete</button>  
         </div>
       `;
       bottom.appendChild(card);
     })
   })
-  .catch(error => {
-    console.error('Fetch error:', error);
-  });
+
+  function deleterobot (id){
+    console.log(id);
+    axios.delete(`http://localhost:3000/robots/${id}`)
+window.location.reload()
+  }
+
+
+  // {
+  //   "robots":[
+  //   {
+  //       "id":1,
+  //       "image":"../photo/p1.png.webp",
+  //       "name":"The Upper eye",
+  //       "p":"Who are in extremely love with eco friendly system.",
+  //       "button":"VIEW DETAILS"
+  //   },
+  //   {
+  //       "id":2,
+  //       "image":"../photo/p2.png.webp",
+  //       "name":"The Crab Wheel",
+  //       "p":"Who are in extremely love with eco friendly system.",
+  //       "button":"VIEW DETAILS"
+  //   },
+  //   {
+  //       "id":3,
+  //       "image":"../photo/p3.png.webp",
+  //       "name":"The Plug Ninja",
+  //       "p":"Who are in extremely love with eco friendly system.",
+  //       "button":"VIEW DETAILS"
+  //   },
+  //   {
+  //       "id":4,
+  //       "image":"../photo/p4.png.webp",
+  //       "name":"The Controller",
+  //       "p":"Who are in extremely love with eco friendly system.",
+  //       "button":"VIEW DETAILS"
+  //   }
+    
+  //   ]
+  //   }

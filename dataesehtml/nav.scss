@@ -289,8 +289,8 @@ footer{
 
     .section1{
         display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
         padding: 100px;
         .card{
             display: flex;
@@ -307,6 +307,8 @@ footer{
                 width: 45%;
                 height:100%;
                 padding: 20px;
+                min-height: 100px;
+                min-width: 100px;
                 img{
                     width: 100%;
                     height: 100%;
@@ -332,4 +334,16 @@ footer{
             color: gray;
          }
         }}
+    }
+    button{
+        color: #f8f8f8;
+        padding: 13px 25px;
+           border: none;
+           font-weight: 600;
+           transition: all 0.5s ease;
+        background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+        &:hover{
+            background: white;
+            color: #222;
+        }
     }
