@@ -68,9 +68,32 @@
                     flex-direction: column;
                     .left{
                         width: 100%;
+                     
                     }
                     .right{
                         width: 100%;
+                    
+                    }
+                }
+            }
+        }
+    }
+    @media screen  and (max-width:576px){
+        .section3{
+
+            .container{
+                .section31{
+                    align-items: flex-start;
+                    flex-direction: column;
+                    .left{
+                        width: 100%;
+                     
+                    }
+                    .right{
+                        width: 100%;
+                        h2{
+                            font-size: 20px;
+                        }
                     }
                 }
             }

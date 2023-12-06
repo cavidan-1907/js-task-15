@@ -546,6 +546,21 @@ nav .container .nav ul {
     width: 100%;
   }
 }
+@media screen and (max-width: 576px) {
+  .section3 .container .section31 {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .section3 .container .section31 .left {
+    width: 100%;
+  }
+  .section3 .container .section31 .right {
+    width: 100%;
+  }
+  .section3 .container .section31 .right h2 {
+    font-size: 20px;
+  }
+}
 .section4 {
   width: 100%;
   padding: 60px 0;
@@ -626,6 +641,21 @@ nav .container .nav ul {
   }
   .section4 .container .section41 .left {
     width: 100%;
+  }
+  .section4 .container .section41 .right {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .section4 .container .section41 {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .section4 .container .section41 .left {
+    width: 100%;
+  }
+  .section4 .container .section41 .left h2 {
+    font-size: 20px;
   }
   .section4 .container .section41 .right {
     width: 100%;
@@ -839,7 +869,7 @@ footer .container .footer .bottom {
 footer .container .footer .bottom a {
   font-size: 15px;
   color: white;
-  width: 50%;
+  width: 65%;
 }
 footer .container .footer .bottom span, footer .container .footer .bottom i {
   color: #828fff;
@@ -847,10 +877,9 @@ footer .container .footer .bottom span, footer .container .footer .bottom i {
 footer .container .footer .bottom .menu-icon {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   font-size: 15px;
-  width: 45%;
-  gap: 20px;
+  width: 20%;
 }
 footer .container .footer .bottom .menu-icon i {
   background-color: #222;
@@ -936,10 +965,26 @@ footer .container .footer .top .child3 .grid {
   gap: 10px;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 776px) {
   footer .container .footer .bottom {
     flex-direction: column;
     align-items: flex-start;
+  }
+  footer .container .footer .bottom .menu-icon {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  footer .container .footer .top .child2 input {
+    width: 100%;
+  }
+  footer .container .footer .top .child3 .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  footer .container .footer .bottom .menu-icon {
+    gap: 10px;
   }
 }
 .modal-bg {
@@ -1031,6 +1076,7 @@ footer .container .footer .top .child3 .grid {
   position: fixed;
   width: 60px;
   height: 60px;
+  background-color: #222;
   transition: all 2s ease;
 }
 
