@@ -70,11 +70,14 @@ window.onscroll = () => {
   }
 };
 
+let page=4;
+function showData(){
+
 const bottom = document.querySelector('.bottom1');
 fetch('http://localhost:3000/robots')
   .then(response => response.json()) 
   .then(data => {
-    data.forEach(robot => {
+    data.slice(page-4,page).forEach(robot => {
       const card = document.createElement('div');
       card.classList.add('card');
       card.innerHTML += `
@@ -84,57 +87,68 @@ fetch('http://localhost:3000/robots')
         <div class="text">
           <h5>${robot.name}</h5>
           <p>${robot.p}</p>
-          <button>
-            <a href="./dataesehtml/navfoot.html?id=${robot.id}">VIEW MORE</a>
-          </button>  
+        
+            <a href="./dataesehtml/navfoot.html?id=${robot.id}"> <button>VIEW MORE  </button></a>
+        
           <button onclick="deleterobot(${robot.id})">Delete</button>  
+
+          <button onclick="editRobot(${robot.id})">Uptade</button> 
         </div>
       `;
       bottom.appendChild(card);
     })
   })
+}
+let form1=document.querySelector(".form1");
+let uptade=document.querySelector(".uptade");
+let name1=document.querySelector("#name1");
+let category1=document.querySelector("#category1");
+let image1=document.querySelector("#image1");
+let none=document.querySelector(".x");
 
+
+
+function editRobot(id){
+  uptade.style.display="block";
+  none.addEventListener("click",(e)=>{
+    e.preventDefault();
+    uptade.style.display="none";
+    });
+    form1.addEventListener("submit",function(event){
+      event.preventDefault()
+   
+        axios.get(`http://localhost:3000/robots/${id}`).then(res=> console.log(res.data))
+        let src1=image1.files[0]
+        const reader1=new FileReader();
+
+        reader1.onload=function (e) { 
+      const   obj1={
+          name:name1.value,
+          p:category1.value,
+          image:e.target.result
+        }
+        console.log(obj1);
+        axios.patch(`http://localhost:3000/robots/${id}`,obj1).then(res=> console.log(res.data))
+}
+reader1.readAsDataURL(src1);
+});
+
+}
+
+showData()
   function deleterobot (id){
     console.log(id);
     axios.delete(`http://localhost:3000/robots/${id}`)
 window.location.reload()
   }
 
+let showBtn=document.querySelector(".showBtn");
+
+showBtn.addEventListener("click",()=>{
+  page+=4;
+  showData();
+  event.target.style.display="none";
+})
 
 
 
-
-
-  // {
-  //   "robots":[
-  //   {
-  //       "id":1,
-  //       "image":"../photo/p1.png.webp",
-  //       "name":"The Upper eye",
-  //       "p":"Who are in extremely love with eco friendly system.",
-  //       "button":"VIEW DETAILS"
-  //   },
-  //   {
-  //       "id":2,
-  //       "image":"../photo/p2.png.webp",
-  //       "name":"The Crab Wheel",
-  //       "p":"Who are in extremely love with eco friendly system.",
-  //       "button":"VIEW DETAILS"
-  //   },
-  //   {
-  //       "id":3,
-  //       "image":"../photo/p3.png.webp",
-  //       "name":"The Plug Ninja",
-  //       "p":"Who are in extremely love with eco friendly system.",
-  //       "button":"VIEW DETAILS"
-  //   },
-  //   {
-  //       "id":4,
-  //       "image":"../photo/p4.png.webp",
-  //       "name":"The Controller",
-  //       "p":"Who are in extremely love with eco friendly system.",
-  //       "button":"VIEW DETAILS"
-  //   }
-    
-  //   ]
-  //   }

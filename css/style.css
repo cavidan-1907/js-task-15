@@ -292,6 +292,14 @@ nav .container .nav ul {
   font-weight: 600;
   transition: all 0.5s ease;
 }
+.section2 .container .section21 .bottom1 .card .text button a {
+  color: #222;
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+.section2 .container .section21 .bottom1 .card .text button a:hover {
+  color: white;
+}
 .section2 .container .section21 .bottom1 .card .text button:hover {
   color: white;
   background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
@@ -1062,8 +1070,8 @@ footer .container .footer .top .child3 .grid {
   right: 10px;
   border-radius: 50%;
   position: fixed;
-  width: 60px;
-  height: 60px;
+  width: 35px;
+  height: 35px;
   display: none;
   transition: all 2s ease;
 }
@@ -1074,12 +1082,66 @@ footer .container .footer .top .child3 .grid {
   right: 10px;
   border-radius: 50%;
   position: fixed;
-  width: 60px;
-  height: 60px;
+  width: 35px;
+  height: 35px;
   background-color: #222;
   transition: all 2s ease;
 }
 
 body {
   position: relative;
+}
+
+.uptade {
+  display: flex;
+  flex-direction: column;
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
+  position: fixed;
+  z-index: 11111111111111111000000;
+  width: 300px;
+  height: 300px;
+  display: none;
+}
+.uptade .form1 {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  border-radius: 20px;
+}
+.uptade .form1 p {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.uptade .form1 #name1 {
+  border-radius: 5px;
+  padding: 10px 90px 10px 10px;
+  outline: none;
+  transition: all 1s ease;
+  border: none;
+  background-color: #f8f8f8;
+  border: 2px solid rgb(52, 52, 54);
+}
+.uptade .form1 #category1 {
+  border-radius: 5px;
+  padding: 10px 90px 10px 10px;
+  outline: none;
+  transition: all 1s ease;
+  border: none;
+  background-color: #f8f8f8;
+  border: 2px solid rgb(52, 52, 54);
+}
+.uptade .form1 #submit1 {
+  background-color: rgb(81, 81, 241);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.uptade .form1 input {
+  outline: none;
 }/*# sourceMappingURL=style.css.map */
